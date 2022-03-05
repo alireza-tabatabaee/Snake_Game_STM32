@@ -250,7 +250,7 @@ uint8_t checkSnakeCrash(void)
 {
  80002e0:	b480      	push	{r7}
  80002e2:	af00      	add	r7, sp, #0
-	return ((hx+dx)==-1||(hx+dx)==22||(hy+dy)==13||((hy+dy)==-1))||(grid[hx+dx][hy+dy] > 0 && grid[hx+dx][hy+dy]<5);
+	return ((hx+dx)==-1||(hx+dx)==21||(hy+dy)==12||((hy+dy)==-1))||(grid[hx+dx][hy+dy] > 0 && grid[hx+dx][hy+dy]<5);
  80002e4:	4b33      	ldr	r3, [pc, #204]	; (80003b4 <checkSnakeCrash+0xd4>)
  80002e6:	f993 3000 	ldrsb.w	r3, [r3]
  80002ea:	461a      	mov	r2, r3
@@ -265,7 +265,7 @@ uint8_t checkSnakeCrash(void)
  8000302:	4b2d      	ldr	r3, [pc, #180]	; (80003b8 <checkSnakeCrash+0xd8>)
  8000304:	f993 3000 	ldrsb.w	r3, [r3]
  8000308:	4413      	add	r3, r2
- 800030a:	2b16      	cmp	r3, #22
+ 800030a:	2b15      	cmp	r3, #21
  800030c:	d048      	beq.n	80003a0 <checkSnakeCrash+0xc0>
  800030e:	4b2b      	ldr	r3, [pc, #172]	; (80003bc <checkSnakeCrash+0xdc>)
  8000310:	f993 3000 	ldrsb.w	r3, [r3]
@@ -273,7 +273,7 @@ uint8_t checkSnakeCrash(void)
  8000316:	4b2a      	ldr	r3, [pc, #168]	; (80003c0 <checkSnakeCrash+0xe0>)
  8000318:	f993 3000 	ldrsb.w	r3, [r3]
  800031c:	4413      	add	r3, r2
- 800031e:	2b0d      	cmp	r3, #13
+ 800031e:	2b0c      	cmp	r3, #12
  8000320:	d03e      	beq.n	80003a0 <checkSnakeCrash+0xc0>
  8000322:	4b26      	ldr	r3, [pc, #152]	; (80003bc <checkSnakeCrash+0xdc>)
  8000324:	f993 3000 	ldrsb.w	r3, [r3]
@@ -2216,9 +2216,9 @@ static void MX_TIM1_Init(void)
  8001124:	4b1c      	ldr	r3, [pc, #112]	; (8001198 <MX_TIM1_Init+0xa0>)
  8001126:	2200      	movs	r2, #0
  8001128:	609a      	str	r2, [r3, #8]
-  htim1.Init.Period = 11999;
+  htim1.Init.Period = 5999;
  800112a:	4b1b      	ldr	r3, [pc, #108]	; (8001198 <MX_TIM1_Init+0xa0>)
- 800112c:	f642 62df 	movw	r2, #11999	; 0x2edf
+ 800112c:	f241 726f 	movw	r2, #5999	; 0x176f
  8001130:	60da      	str	r2, [r3, #12]
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
  8001132:	4b19      	ldr	r3, [pc, #100]	; (8001198 <MX_TIM1_Init+0xa0>)

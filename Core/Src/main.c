@@ -106,7 +106,7 @@ void newGameStart(void)
 
 uint8_t checkSnakeCrash(void)
 {
-	return ((hx+dx)==-1||(hx+dx)==22||(hy+dy)==13||((hy+dy)==-1))||(grid[hx+dx][hy+dy] > 0 && grid[hx+dx][hy+dy]<5);
+	return ((hx+dx)==-1||(hx+dx)==21||(hy+dy)==12||((hy+dy)==-1))||(grid[hx+dx][hy+dy] > 0 && grid[hx+dx][hy+dy]<5);
 }
 
 void updateLCD(void)
@@ -581,7 +581,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 999;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 11999;
+  htim1.Init.Period = 5999;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
